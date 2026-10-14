@@ -6,7 +6,6 @@ from .config import VT_API_BASE
 
 
 class VirusTotalError(Exception):
-    """Erreur lors de l'interrogation de l'API VirusTotal."""
 
 class VirusTotalClient:
     def __init__(self, api_key: str, timeout: int = 30):
