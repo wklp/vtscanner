@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "vtscanner"
+version = "1.0.0"
+description = "Scanner de fichiers par hash (MD5/SHA1/SHA256) via l'API VirusTotal"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+dependencies = [
+    "requests>=2.31.0",
+    "colorama>=0.4.6",
+]
+
+[project.scripts]
+vtscan = "vtscanner.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["vtscanner*"]
